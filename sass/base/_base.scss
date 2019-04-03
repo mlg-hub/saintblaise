@@ -1,36 +1,29 @@
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
-html {
-    font-size: 62.5%; // aplly to the phone
-    background-image: linear-gradient(to right, rgb(65, 100, 83), rgb(1, 37, 19));
-    @include respond(tab-land) {
-        //  width is < 1200
-        // 1rem = 9px, 9/16 = 56.25%
-        font-size: 56.25%
-    }
-    @include respond(tab-port) {
-        // width is < 908
-        font-size: 50%
-    }
-    @include respond(big-desktop) {
-        font-size: 75%;
-    }
-}
-
-body {
-    box-sizing: border-box;
-    @include respond(tab-port) {
+    *,
+    *::after,
+    *::before {
+        margin: 0;
         padding: 0;
+        box-sizing: inherit;
     }
-}
-
-:root {
-    --secondary-color: #76a85c;
-    --primary-color: #307408;
-}
+    
+    html {
+        font-size: 62.5%;
+    }
+    
+     :root {
+        --secondary-color: #76a85c;
+        --primary-color: #307408;
+        // --color-tertairy: #1569c7;
+        --color-tertairy: rgba(255, 119, 48, 0.7);
+        --font-family: "lato", sans-serif;
+    }
+    
+    body {
+        background-image: linear-gradient(to right, rgb(65, 100, 83), rgb(1, 37, 19));
+        // aplly to the phone;
+        box-sizing: border-box;
+        display: grid;
+        padding-top: 15px;
+        grid-template-rows: 1rem max-content 53.1rem max-content;
+        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    }
