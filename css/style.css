@@ -126,6 +126,42 @@
   .card__heading-span--3 {
     background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.7), rgba(255, 119, 48, 0.7)); }
 
+.home {
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(51, 51, 51, 0.3), rgba(0, 0, 0, 0.9)), url("../../img/img/gal-4.jpeg");
+  width: 100vw;
+  height: 100vh;
+  padding-top: 5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: max-content;
+  grid-template-columns: repeat(12, 1fr); }
+  .home__logo {
+    grid-row: 1;
+    grid-column: 2/span 10;
+    font-size: 5rem;
+    align-content: center; }
+  .home__welcome {
+    color: #ffb900;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 1.5rem;
+    align-items: center; }
+    .home__welcome span.hotel {
+      background-color: #775d4cb3; }
+    .home__welcome::before, .home__welcome::after {
+      content: "";
+      height: 5px;
+      display: block;
+      background-color: currentColor; }
+    .home__welcome::before {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px; }
+    .home__welcome::after {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px; }
+
 *,
 *::after,
 *::before {
@@ -143,11 +179,8 @@ html {
   --font-family: "lato", sans-serif; }
 
 body {
-  background-image: linear-gradient(to right, #416453, #012513);
   box-sizing: border-box;
   display: grid;
-  padding-top: 15px;
-  grid-template-rows: 1rem max-content 53.1rem max-content;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
 .welcome {
@@ -176,3 +209,39 @@ body {
     .welcome__item:hover {
       border-bottom-width: 2px;
       color: #84ae90; }
+
+.home__footer {
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(158, 255, 67, 0.1), 80%, rgba(112, 182, 48, 0.5));
+  padding: 1rem;
+  bottom: 0rem;
+  width: 100%; }
+
+.nav {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 2rem;
+  align-items: center; }
+  .nav__link:link, .nav__link:visited {
+    font-size: 1.4rem;
+    color: #fff;
+    text-decoration: none;
+    font-family: 1.6rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1.5rem;
+    display: block;
+    transition: all .2s; }
+  .nav__link:hover, .nav__link:active {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px); }
+
+.copyright {
+  font-size: 1.4rem;
+  color: #777;
+  margin-top: 6rem;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  width: 70%; }
