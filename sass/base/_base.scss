@@ -19,11 +19,10 @@
     }
     
     body {
-        background-image: linear-gradient(to right, rgb(65, 100, 83), rgb(1, 37, 19));
         // aplly to the phone;
         box-sizing: border-box;
         display: grid;
-        padding-top: 15px;
-        grid-template-rows: 1rem max-content 53.1rem max-content;
+        // padding-top: 15px;
+        // grid-template-rows: 1rem max-content 53.1rem max-content;
         grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
     }
